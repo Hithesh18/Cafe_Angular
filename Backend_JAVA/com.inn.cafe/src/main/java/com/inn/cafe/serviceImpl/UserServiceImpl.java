@@ -20,7 +20,7 @@ public class UserServiceImpl implements UserService{
 	@Override
 	public ResponseEntity<String> signUp(Map<String, String> requestMap) {
 		
-		log.info("Inside Signup {}", requestMap);
+		//log.info("Inside Signup {}", requestMap);
 		if(validateSignUpMap(requestMap))
 		{
 			
@@ -29,6 +29,7 @@ public class UserServiceImpl implements UserService{
 		{
 			return CafeUtils.getResponseEntity(CafeConstants.InvalidData, HttpStatus.BAD_REQUEST);
 		}
+		return null;
 		
 	}
 	
